@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UIAlertController+multiStyle.h"
+#import "MultiStyleAlert.h"
 
 static NSString * const kTitleKey = @"kTitle";
 static NSString * const kDetailKey = @"kDetailKey";
