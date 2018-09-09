@@ -17,12 +17,12 @@
 pod 'MultiStyleAlert'
 ```
 ## Usage
-<p align = "center"> 
-<img src="ScreenShot/IMG_0086.jpg" width="200" />
-<img src="ScreenShot/IMG_0089.jpg" width="200" />
-<img src="ScreenShot/IMG_0087.jpg" width="200" />
-<img src="ScreenShot/IMG_0088.jpg" width="200" />
-</p>
+<div align = "center"> 
+<img src="ScreenShot/IMG_0086.JPG" width="200" />
+<img src="ScreenShot/IMG_0089.JPG" width="200" />
+<img src="ScreenShot/IMG_0087.JPG" width="200" />
+<img src="ScreenShot/IMG_0088.JPG" width="200" />
+</div>
 
 ```objective-c
 UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Change title & message" message:@"change title & message's color and font " preferredStyle:UIAlertControllerStyleAlert];
