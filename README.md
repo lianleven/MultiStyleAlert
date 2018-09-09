@@ -16,13 +16,21 @@
 ```ruby
 pod 'MultiStyleAlert'
 ```
-## Usage
+## ScreenShot
 <div align = "center"> 
 <img src="ScreenShot/IMG_0086.JPG" width="200" />
 <img src="ScreenShot/IMG_0089.JPG" width="200" />
 <img src="ScreenShot/IMG_0087.JPG" width="200" />
 <img src="ScreenShot/IMG_0088.JPG" width="200" />
 </div>
+## Usage
+
+在使用的文件中导入头文件
+
+```objective-c
+#import "MultiStyleAlert.h"
+
+```
 
 ```objective-c
 UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Change title & message" message:@"change title & message's color and font " preferredStyle:UIAlertControllerStyleAlert];
