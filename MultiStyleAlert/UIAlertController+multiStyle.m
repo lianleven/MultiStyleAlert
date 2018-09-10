@@ -19,7 +19,33 @@
 - (void)showAnimated:(BOOL)animated completion:(void (^ __nullable)(void))completion{
     dispatch_async(dispatch_get_main_queue(), ^{
         UIViewController *vc = [UIApplication sharedApplication].keyWindow.rootViewController;
-        [vc presentViewController:self animated:true completion:nil];
+        [vc presentViewController:self animated:true completion:completion];
+        
+        if (self.textFields.count <= 0) return;
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            for (UITextField *textField in self.textFields) {
+                while (textField.superview == nil) {
+                    // 等返回父视图，测试发现，这里异步情况，已经存在父视图，这里不会执行
+                }
+                UIView *container = textField.superview;
+                UIView *effectView = [container.superview subviews].firstObject;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (effectView && [effectView isKindOfClass:[UIVisualEffectView class]]) {
+                        container.layer.borderColor = textField.layer.borderColor;
+                        container.layer.borderWidth = textField.layer.borderWidth;
+                        container.layer.cornerRadius = textField.layer.cornerRadius;
+                        container.backgroundColor = textField.backgroundColor;
+
+                        textField.layer.borderColor = [UIColor clearColor].CGColor;
+                        textField.layer.borderWidth = 0;
+                        textField.layer.cornerRadius = 0;
+                        textField.backgroundColor = [UIColor clearColor];
+//                        container.backgroundColor = [UIColor clearColor];
+                        effectView.hidden = true;
+                    }
+                });
+            }
+        });
     });
 }
 #pragma mark - add alert action
