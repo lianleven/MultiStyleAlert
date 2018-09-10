@@ -5,6 +5,8 @@
 //  Created by LianLeven on 2018/9/7.
 //  Copyright © 2018年 lianleven. All rights reserved.
 //
+//  https://github.com/lianleven/MultiStyleAlert
+//
 
 #import <UIKit/UIKit.h>
 
@@ -60,7 +62,7 @@ show alertController
  @param font alert title font
  @param color alert title color
  */
-- (void)setTitle:(nullable NSString *)title font:(nonnull UIFont *)font color:(nonnull UIColor *)color;
+- (void)setTitle:(nullable NSString *)title font:(nullable UIFont *)font color:(nullable UIColor *)color;
 
 /**
  Set alert's font and color
@@ -68,7 +70,7 @@ show alertController
  @param font alert title font
  @param color alert title color
  */
-- (void)setTitleFont:(nonnull UIFont *)font color:(nonnull UIColor *)color;
+- (void)setTitleFont:(nullable UIFont *)font color:(nullable UIColor *)color;
 
 /**
  Set alert's message, font and color
@@ -77,7 +79,7 @@ show alertController
  @param font alert message font
  @param color alert message color
  */
-- (void)setMessage:(nullable NSString *)message font:(nonnull UIFont *)font color:(nonnull UIColor *)color;
+- (void)setMessage:(nullable NSString *)message font:(nullable UIFont *)font color:(nullable UIColor *)color;
 
 /**
  Set alert's font and color
@@ -85,7 +87,7 @@ show alertController
  @param font alert message font
  @param color alert message color
  */
-- (void)setMessageFont:(nonnull UIFont *)font color:(nonnull UIColor *)color;
+- (void)setMessageFont:(nullable UIFont *)font color:(nullable UIColor *)color;
 
 /**
  Set alert's content vc

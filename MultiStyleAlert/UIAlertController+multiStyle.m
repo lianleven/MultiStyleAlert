@@ -5,6 +5,8 @@
 //  Created by LianLeven on 2018/9/7.
 //  Copyright © 2018年 lianleven. All rights reserved.
 //
+//  https://github.com/lianleven/MultiStyleAlert
+//
 
 #import "UIAlertController+multiStyle.h"
 
@@ -42,34 +44,44 @@
 
 #pragma mark - Set Style (KVC)
 
-- (void)setTitle:(nullable NSString *)title font:(nonnull UIFont *)font color:(nonnull UIColor *)color{
+- (void)setTitle:(nullable NSString *)title font:(nullable UIFont *)font color:(nullable UIColor *)color{
     if (title != nil && [title isKindOfClass:[NSString class]]) {
         self.title = title;
     }
     [self setTitleFont:font color:color];
 }
-- (void)setTitleFont:(nonnull UIFont *)font color:(nonnull UIColor *)color{
+- (void)setTitleFont:(nullable UIFont *)font color:(nullable UIColor *)color{
     NSString *title = self.title;
     if (!title) return;
+    if (!font || ![font isKindOfClass:[UIFont class]]) {
+        font = [UIFont systemFontOfSize:18]; // default alert's sysytem font
+    }
     NSMutableDictionary *attributes = @{}.mutableCopy;
     attributes[NSFontAttributeName] = font;
-    attributes[NSForegroundColorAttributeName] = color;
+    if (color && [color isKindOfClass:[UIColor class]]) {
+        attributes[NSForegroundColorAttributeName] = color;
+    }
     NSMutableAttributedString *attributedTitle = [[NSMutableAttributedString alloc] initWithString:title attributes:attributes];
     [self setValue:attributedTitle forKey:@"attributedTitle"];
 }
 
-- (void)setMessage:(nullable NSString *)message font:(nonnull UIFont *)font color:(nonnull UIColor *)color{
+- (void)setMessage:(nullable NSString *)message font:(nullable UIFont *)font color:(nullable UIColor *)color{
     if (message != nil && [message isKindOfClass:[NSString class]]) {
         self.message = message;
     }
     [self setMessageFont:font color:color];
 }
-- (void)setMessageFont:(nonnull UIFont *)font color:(nonnull UIColor *)color{
+- (void)setMessageFont:(nullable UIFont *)font color:(nullable UIColor *)color{
     NSString *message = self.message;
     if (!message) return;
+    if (!font || ![font isKindOfClass:[UIFont class]]) {
+        font = [UIFont systemFontOfSize:16]; // default alert's sysytem font
+    }
     NSMutableDictionary *attributes = @{}.mutableCopy;
     attributes[NSFontAttributeName] = font;
-    attributes[NSForegroundColorAttributeName] = color;
+    if (color && [color isKindOfClass:[UIColor class]]) {
+        attributes[NSForegroundColorAttributeName] = color;
+    }
     NSMutableAttributedString *attributedMessage = [[NSMutableAttributedString alloc] initWithString:message attributes:attributes];
     [self setValue:attributedMessage forKey:@"attributedMessage"];
 }
