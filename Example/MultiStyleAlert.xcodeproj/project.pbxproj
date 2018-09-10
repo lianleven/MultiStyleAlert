@@ -30,6 +30,8 @@
 		5C4DC30021436B58002777EC /* UIAlertController+multiStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+multiStyle.m"; sourceTree = "<group>"; };
 		5C4DC30221436B58002777EC /* UIAlertController+multiStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+multiStyle.h"; sourceTree = "<group>"; };
 		5C4DC3062143AF79002777EC /* MultiStyleAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiStyleAlert.h; sourceTree = "<group>"; };
+		5CF54BCD2146200B002C0462 /* MultiStyleAlert.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = MultiStyleAlert.podspec; path = ../../MultiStyleAlert.podspec; sourceTree = "<group>"; };
+		5CF54BCE21462023002C0462 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,8 @@
 		5C4DC2D321420F50002777EC /* MultiStyleAlert */ = {
 			isa = PBXGroup;
 			children = (
+				5CF54BCD2146200B002C0462 /* MultiStyleAlert.podspec */,
+				5CF54BCE21462023002C0462 /* README.md */,
 				5C4DC2FF21436B58002777EC /* MultiStyleAlert */,
 				5C4DC2D421420F50002777EC /* AppDelegate.h */,
 				5C4DC2D521420F50002777EC /* AppDelegate.m */,
