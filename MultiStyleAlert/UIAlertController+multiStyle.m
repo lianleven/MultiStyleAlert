@@ -54,7 +54,7 @@
     NSString *title = self.title;
     if (!title) return;
     if (!font || ![font isKindOfClass:[UIFont class]]) {
-        font = [UIFont systemFontOfSize:18]; // default alert's sysytem font
+        font = [UIFont boldSystemFontOfSize:17]; // default alert's sysytem font
     }
     NSMutableDictionary *attributes = @{}.mutableCopy;
     attributes[NSFontAttributeName] = font;
@@ -75,7 +75,7 @@
     NSString *message = self.message;
     if (!message) return;
     if (!font || ![font isKindOfClass:[UIFont class]]) {
-        font = [UIFont systemFontOfSize:16]; // default alert's sysytem font
+        font = [UIFont systemFontOfSize:13]; // default alert's sysytem font
     }
     NSMutableDictionary *attributes = @{}.mutableCopy;
     attributes[NSFontAttributeName] = font;
