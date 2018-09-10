@@ -32,7 +32,7 @@ show alertController
  @param style action style
  @param handler action handle
  */
-- (void)addActionWithTitle:(nullable NSString *)title style:(UIAlertActionStyle)style handler:(void (^ __nullable)(UIAlertAction *action))handler;
+- (void)addActionWithTitle:(nullable NSString *)title style:(UIAlertActionStyle)style handler:(void (^ __nullable)(UIAlertAction * _Nonnull action))handler;
 
 /**
  Add an action to Alert
@@ -42,7 +42,7 @@ show alertController
  @param style action style
  @param handler handle
  */
-- (void)addActionWithTitle:(nullable NSString *)title color:(nullable UIColor *)color style:(UIAlertActionStyle)style handler:(void (^ __nullable)(UIAlertAction *action))handler;
+- (void)addActionWithTitle:(nullable NSString *)title color:(nullable UIColor *)color style:(UIAlertActionStyle)style handler:(void (^ __nullable)(UIAlertAction * _Nonnull action))handler;
 
 /**
  Add an action to Alert
@@ -53,7 +53,7 @@ show alertController
  @param style action style
  @param handler handle
  */
-- (void)addActionWithTitle:(nullable NSString *)title color:(nullable UIColor *)color image:(nullable UIImage  *)image style:(UIAlertActionStyle)style handler:(void (^ __nullable)(UIAlertAction *action))handler;
+- (void)addActionWithTitle:(nullable NSString *)title color:(nullable UIColor *)color image:(nullable UIImage  *)image style:(UIAlertActionStyle)style handler:(void (^ __nullable)(UIAlertAction * _Nonnull action))handler;
 
 /**
  Set alert's title, font and color
