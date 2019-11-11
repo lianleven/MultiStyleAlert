@@ -10,6 +10,7 @@
 
 #import "UIAlertController+multiStyle.h"
 
+
 @implementation UIAlertController (multiStyle)
 
 
@@ -19,6 +20,9 @@
 - (void)showAnimated:(BOOL)animated completion:(void (^ __nullable)(void))completion{
     dispatch_async(dispatch_get_main_queue(), ^{
         UIViewController *vc = [UIApplication sharedApplication].keyWindow.rootViewController;
+        while (vc.presentedViewController != nil) {
+            vc = vc.presentedViewController;
+        }
         [vc presentViewController:self animated:true completion:completion];
         
         if (self.textFields.count <= 0) return;
